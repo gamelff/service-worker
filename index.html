@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+  hello im gonna be cashed
+  i don't know if this will work but i hope it will
+<script>
+if('serviceWorker' in navigator) {
+  let registration;
+
+  const registerServiceWorker = async () => {
+    registration = await          navigator.serviceWorker.register('./service-worker.js');
+  };
+
+  registerServiceWorker();
+}
+
+</script>
+</body>
+</html>
