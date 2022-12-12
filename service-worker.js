@@ -27,3 +27,7 @@ self.addEventListener('fetch', e => {
     .then(response => response ? response : fetch(e.request))
   )
 });
+onmessage = (event) => {
+if(event=="clear"){
+caches.clear(cacheName);
+}};
