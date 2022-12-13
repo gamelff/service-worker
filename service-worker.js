@@ -1,3 +1,4 @@
+try {
 // give your cache a name
 const cacheName = 'my-cache';
 
@@ -27,14 +28,11 @@ self.addEventListener('fetch', e => {
     .then(response => response ? response : fetch(e.request))
   )
 });
-onmessage = (event) => {
-if(event.data=="clear"){
-  try
-  {
-caches.clear(cacheName);
-  }
-  catch (err) 
-  {
-    event.source.postMessage(err);
-  }
-}};
+/* onmessage = (event) => {
+   
+}; */
+}
+catch(err)
+{
+  event.source.postMessage(err);
+}
