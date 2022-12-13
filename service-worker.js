@@ -1,4 +1,4 @@
-try {
+//try {
 // give your cache a name
 const cacheName = 'my-cache';
 
@@ -30,9 +30,9 @@ self.addEventListener('fetch', e => {
 });
 /* onmessage = (event) => {
    
-}; */
+}; 
 }
 catch(err)
 {
   event.source.postMessage(err);
-}
+}*/
