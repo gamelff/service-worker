@@ -29,5 +29,12 @@ self.addEventListener('fetch', e => {
 });
 onmessage = (event) => {
 if(event.data=="clear"){
+  try
+  {
 caches.clear(cacheName);
+  }
+  catch (err) 
+  {
+    event.source.postMessage(err);
+  }
 }};
