@@ -31,12 +31,8 @@ if ("serviceWorker" in navigator) {
 }
 onmessage=(event)=>
 {
-  if(event.data=="error")
-  {
-    alert("an error occured in service worker"); 
-  }
+    alert(`an error ${event.data} occured in service worker`);
 };
-
 </script>
 </body>
 </html>
